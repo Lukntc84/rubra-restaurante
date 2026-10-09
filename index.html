@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubra · Brasa e Vinho</title>
+<meta name="description" content="Rubra, brasa de lenha e vinho em São Paulo. Projeto fictício de portfólio de Luccas Santana.">
+<meta name="theme-color" content="#e10600">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:wght@500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="topo" class="page">
+
+  <!-- NAVEGAÇÃO -->
+  <header style="position:sticky;top:0;z-index:30;background:#e10600;border-bottom:1px solid #000000">
+    <div style="max-width:1440px;margin:0 auto;height:56px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(16px,3vw,32px)">
+      <a href="#topo" aria-label="Rubra, voltar ao início" class="disp" style="font-size:30px;line-height:1;color:#ffffff">Rubra</a>
+      <nav class="nav-links ui" aria-label="Principal" style="gap:26px;font-size:14px;align-items:center">
+        <a href="#cardapio" class="lk">Cardápio</a>
+        <a href="#experiencias" class="lk">Experiências</a>
+        <a href="#casa" class="lk">A casa</a>
+        <a href="#duvidas" class="lk">Dúvidas</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="#reservas" class="btn btn-dark" style="min-height:36px;padding:8px 14px">Reservar mesa</a>
+        <button type="button" class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" style="width:44px;height:44px;border-radius:15px;border:1px solid #ffffff;background:transparent;color:#ffffff;cursor:pointer;align-items:center;justify-content:center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOPO -->
+  <section id="hero" aria-label="Apresentação" style="position:relative;min-height:max(660px,calc(100svh - 56px));display:flex;align-items:center;justify-content:center;padding:80px clamp(20px,5vw,64px) 140px;box-sizing:border-box;text-align:center">
+    <video class="hero-vid" id="hero-vid" src="assets/video/hero-grelha.mp4" poster="assets/img/hero-grelha-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(79,4,35,.66) 0%,rgba(79,4,35,.58) 55%,#4f0423 100%)"></div>
+    <div class="hb hb1" data-sc="scatter" data-k="1"><div class="bob" style="width:100%;height:100%"><div class="ph blob-a" style="width:100%;height:100%"><img class="fill" src="assets/img/hero-picanha.webp" alt="" decoding="async"></div></div></div>
+    <div class="hb hb2" data-sc="scatter" data-k="0.8"><div class="bob2" style="width:100%;height:100%"><div class="ph blob-b" style="width:100%;height:100%"><img class="fill" src="assets/img/hero-drink.webp" alt="" decoding="async"></div></div></div>
+    <div class="hb hb3" data-sc="scatter" data-k="1.1"><div class="bob3" style="width:100%;height:100%"><div class="ph blob-c" style="width:100%;height:100%"><img class="fill" src="assets/img/hero-legumes.webp" alt="" decoding="async"></div></div></div>
+    <div class="hb hb4" data-sc="scatter" data-k="0.9"><div class="bob" style="width:100%;height:100%"><div class="ph blob-d" style="width:100%;height:100%"><img class="fill" src="assets/img/hero-costela.webp" alt="" decoding="async"></div></div></div>
+    <div class="hb hb5" data-sc="drop" data-k="1"><div class="bob2" style="width:100%;height:100%"><div class="ph blob-e" style="width:100%;height:100%;padding:8px"><img class="fill" src="assets/img/hero-prato.webp" alt="" decoding="async"></div></div></div>
+
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:20px;max-width:1000px">
+      <span class="hin" style="font-size:14px;color:#ffc7c6">Rubra · Brasa e Vinho</span>
+      <span class="ui brk hin" style="font-size:13px;color:#ffc7c6;animation-delay:.08s">Lenha acesa às seis da manhã</span>
+      <h1 class="disp" style="font-size:clamp(56px,10.5vw,168px);color:#e10600;white-space:nowrap">
+        <span class="rl rl-load"><span>Fogo</span></span>
+        <span class="rl rl-load d1"><span>(de verdade)</span></span>
+      </h1>
+      <div class="hin" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:6px;animation-delay:.3s">
+        <a href="#reservas" class="btn btn-red">Reservar mesa
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </a>
+        <a href="#cardapio" class="btn btn-ghost">Ver cardápio
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMAÇÕES RÁPIDAS -->
+  <div class="info-strip">
+    <ul style="list-style:none;margin:0 auto;padding:0;max-width:1240px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <li data-rv="" style="--d:0ms"><a href="#horarios" class="info-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="display:flex;flex-direction:column;gap:2px"><span class="ui" style="font-size:13px;color:#ffffff">Ter a dom</span><span style="font-size:13px;color:#ffc7c6">Almoço e jantar</span></span></a></li>
+      <li data-rv="" style="--d:90ms"><a href="#reservas" class="info-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span style="display:flex;flex-direction:column;gap:2px"><span class="ui" style="font-size:13px;color:#ffffff">Rua Exemplo, 123</span><span style="font-size:13px;color:#ffc7c6">São Paulo/SP</span></span></a></li>
+      <li data-rv="" style="--d:180ms"><a href="https://wa.me/5500900000000" target="_blank" rel="noopener" class="info-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg><span style="display:flex;flex-direction:column;gap:2px"><span class="ui" style="font-size:13px;color:#ffffff">Reserva pelo WhatsApp</span><span style="font-size:13px;color:#ffc7c6">Confirmação em até 1h</span></span></a></li>
+      <li data-rv="" style="--d:270ms"><a href="#experiencias" class="info-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1.2 2.5 2 2.5-.6-2.6.2-5.6 1-8z"></path></svg><span style="display:flex;flex-direction:column;gap:2px"><span class="ui" style="font-size:13px;color:#ffffff">Rodízio aos domingos</span><span style="font-size:13px;color:#ffc7c6">R$ 149 por pessoa</span></span></a></li>
+    </ul>
+  </div>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio" style="padding:clamp(70px,8vw,110px) 0 clamp(70px,8vw,110px);display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:0 clamp(20px,5vw,64px)">
+      <span class="ui brk" data-rv="" style="font-size:13px;color:#ffc7c6">Do fogo para a mesa</span>
+      <h2 class="disp" style="font-size:clamp(56px,8.5vw,128px);color:#e10600;margin-bottom:6px"><span class="rl" data-rv="" style="--d:80ms"><span>Cardápio</span></span></h2>
+      <div role="tablist" id="tabs" aria-label="Categorias do cardápio" style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px 30px"></div>
+    </div>
+
+    <div data-rv="" style="--d:300ms;position:relative">
+      <button type="button" class="arrow" id="car-prev" aria-label="Pratos anteriores" style="left:clamp(8px,1.5vw,24px);background:#260212;color:#ffc7c6">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
+      <button type="button" class="arrow" id="car-next" aria-label="Próximos pratos" style="right:clamp(8px,1.5vw,24px);background:#e10600;color:#ffffff">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
+      <div class="car" id="car" role="region" aria-label="Pratos" tabindex="0"></div>
+      <div id="dots" style="display:flex;justify-content:center;gap:6px;margin-top:6px" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIAS -->
+  <section id="experiencias" style="padding:clamp(56px,6vw,80px) clamp(20px,5vw,64px) clamp(56px,6vw,80px);display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+    <span data-rv="" style="font-size:14px;color:#ffc7c6">Quer um motivo para vir? A gente tem.</span>
+    <div role="group" id="exp-pills" aria-label="Experiências" data-rv="" style="--d:100ms;display:flex;flex-wrap:wrap;justify-content:center;gap:6px"></div>
+    <span class="ui brk" id="exp-kicker" data-rv="" style="--d:80ms;font-size:13px;color:#ffc7c6;margin-top:6px"></span>
+    <h2 class="disp" style="font-size:clamp(44px,6vw,92px);color:#e10600"><span class="rl" data-rv="" style="--d:120ms"><span id="exp-head"></span></span></h2>
+    <div id="exp-items" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(20px,4vw,56px);width:100%;max-width:900px;margin-top:4px"></div>
+    <div data-rv="" style="display:flex;align-items:center;gap:18px;width:100%;max-width:900px;margin-top:8px">
+      <span style="flex:1;height:1px;background:rgba(255,199,198,.4)"></span>
+      <a href="https://wa.me/5500900000000?text=Ol%C3%A1!%20Quero%20montar%20um%20evento%20na%20Rubra." target="_blank" rel="noopener" class="btn btn-ghost">Montar um evento sob medida
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+      <span style="flex:1;height:1px;background:rgba(255,199,198,.4)"></span>
+    </div>
+  </section>
+
+  <!-- A CASA -->
+  <section id="casa" style="padding:clamp(70px,8vw,110px) clamp(16px,4vw,48px);display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center">
+    <span class="ui brk" data-rv="" style="font-size:13px;color:#ffc7c6">A nossa</span>
+    <h2 class="disp" style="font-size:clamp(64px,10vw,150px);color:#e10600"><span class="rl" data-rv="" style="--d:100ms"><span>Cozinha</span></span></h2>
+    <p data-rv="" style="--d:220ms;margin:0;max-width:600px;font-size:15px;line-height:1.55;color:#ffffff">"A gente acende a lenha às seis da manhã para servir o almoço ao meio-dia. Antes disso a brasa não fica boa para a carne."</p>
+    <span class="ui" data-rv="" style="--d:300ms;font-size:12px;color:#ffc7c6">Helena Duarte, chef e fundadora</span>
+
+    <div class="shape-card" data-sc="pop" style="width:100%;max-width:1240px;margin-top:40px;background:#260212;padding:clamp(48px,6vw,80px) clamp(22px,4vw,64px);box-sizing:border-box;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);text-align:left;align-items:center">
+      <div role="tablist" id="story-tabs" aria-label="Sobre a cozinha" aria-orientation="vertical" style="flex:1 1 200px;max-width:240px;display:flex;flex-direction:column;gap:4px"></div>
+      <div id="story-body" style="flex:2 1 320px;display:flex;flex-direction:column;gap:16px;min-width:0">
+        <p id="story-title" style="margin:0;font-size:clamp(22px,2.2vw,30px);line-height:1.3;color:#ffffff;max-width:24ch"></p>
+        <p id="story-text" style="margin:0;font-size:15px;line-height:1.55;color:#ffc7c6;max-width:52ch"></p>
+        <a href="#cardapio" class="btn btn-red btn-sm" style="align-self:flex-start">Ver cardápio</a>
+      </div>
+      <div style="flex:1 1 220px;max-width:300px;margin-left:auto">
+        <div class="ph blob-e" style="width:100%;aspect-ratio:1/1.1;background-color:#4f0423"><img class="fill" id="story-img" src="assets/img/story-forno.webp" alt="Fogo aceso no forno a lenha" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÚVIDAS -->
+  <section id="duvidas" style="padding:clamp(70px,8vw,110px) clamp(20px,5vw,64px) 40px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center">
+    <h2 class="disp" style="font-size:clamp(56px,8.5vw,128px);color:#e10600">
+      <span class="rl" data-rv=""><span>Antes de</span></span>
+      <span class="rl" data-rv="" style="--d:120ms"><span>(você vir)</span></span>
+    </h2>
+    <p data-rv="" style="--d:200ms;margin:0;max-width:460px;font-size:15px;line-height:1.5;color:#ffffff">As perguntas que a gente mais ouve no salão, respondidas antes de você chegar.</p>
+    <div id="faqs" style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:8px;margin-top:20px;text-align:left"></div>
+  </section>
+
+  <!-- AINDA COM FOME -->
+  <section style="padding:clamp(70px,8vw,110px) clamp(20px,5vw,64px) 40px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+    <span class="ui brk" data-rv="" style="font-size:13px;color:#ffc7c6">Ainda</span>
+    <h2 class="disp" style="font-size:clamp(64px,10vw,150px);color:#ffc7c6">
+      <span class="rl" data-rv="" style="--d:80ms"><span>Com</span></span>
+      <span class="rl" data-rv="" style="--d:200ms"><span>fome?</span></span>
+    </h2>
+    <p data-rv="" style="--d:260ms;margin:0;font-size:15px;color:#ffffff">Reserve pelo site ou chame no WhatsApp.</p>
+    <div data-rv="" style="--d:320ms;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px">
+      <a href="#reservas" class="btn btn-red btn-lg">Reservar mesa
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+      <a href="https://wa.me/5500900000000?text=Ol%C3%A1!%20Quero%20reservar%20uma%20mesa%20na%20Rubra." target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- RESERVAS -->
+  <section id="reservas" style="padding:20px clamp(16px,4vw,48px) clamp(60px,7vw,100px);display:flex;justify-content:center">
+    <div class="lt shape-ticket" data-sc="pop" style="width:100%;max-width:880px;background:#ffc7c6;color:#260212;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(56px,6vw,80px) 0 0">
+      <span class="ui brk" style="font-size:13px;color:#260212">Sua mesa</span>
+      <h2 class="disp" style="font-size:clamp(64px,9vw,128px);color:#260212;margin-top:12px"><span class="rl" data-rv=""><span>Reserve</span></span></h2>
+      <p style="margin:26px 0 0;max-width:440px;font-size:14px;line-height:1.5;color:#260212;padding:0 20px">Escolha o dia e o horário. A confirmação chega pelo WhatsApp em até uma hora.</p>
+
+      <div style="width:100%;max-width:620px;box-sizing:border-box;padding:28px clamp(20px,4vw,40px) 36px;text-align:left">
+        <div id="res-done" class="fade-in" hidden style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:24px;background:#260212;color:#ffffff;border-radius:15px">
+          <h3 tabindex="-1" id="done-title" class="disp" style="font-size:40px;color:#ffffff;outline:none"></h3>
+          <p id="done-text" style="margin:0;font-size:15px;line-height:1.5;color:#ffc7c6"></p>
+          <button type="button" id="res-again" class="btn btn-red">Fazer outra reserva</button>
+        </div>
+        <form id="res-form" novalidate aria-label="Reservar mesa" style="display:flex;flex-direction:column;gap:14px">
+          <div class="fgrid">
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+              <label for="r-data" class="ui" style="font-size:12px;color:#260212">Data</label>
+              <input id="r-data" name="data" type="date" class="fld">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+              <label for="r-hora" class="ui" style="font-size:12px;color:#260212">Horário</label>
+              <select id="r-hora" name="hora" class="fld"><option value="">Escolha o dia</option></select>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+              <label for="r-pessoas" class="ui" style="font-size:12px;color:#260212">Pessoas</label>
+              <select id="r-pessoas" name="pessoas" class="fld">
+                <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="mais">Mais de 10</option>
+              </select>
+            </div>
+          </div>
+          <span id="e-dh" role="alert" hidden style="font-size:13px;font-weight:700;color:#a30400"></span>
+          <span id="hint-dias" class="hint">Ter a sex: reserva só no jantar (no almoço é por ordem de chegada). Sáb e dom: almoço e jantar. Segunda a casa fecha.</span>
+          <span id="e-pessoas" class="hint" hidden style="font-weight:700;color:#a30400">Para mais de 10 pessoas a gente monta a mesa pelo WhatsApp. <a href="https://wa.me/5500900000000?text=Ol%C3%A1!%20Quero%20reservar%20para%20mais%20de%2010%20pessoas%20na%20Rubra." target="_blank" rel="noopener" class="lk-u">Falar agora</a></span>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px">
+              <label for="r-nome" class="ui" style="font-size:12px;color:#260212">Nome</label>
+              <input id="r-nome" name="nome" type="text" autocomplete="name" class="fld">
+              <span id="e-nome" role="alert" hidden style="font-size:13px;font-weight:700;color:#a30400"></span>
+            </div>
+            <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px">
+              <label for="r-tel" class="ui" style="font-size:12px;color:#260212">WhatsApp</label>
+              <input id="r-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" class="fld">
+              <span id="e-tel" role="alert" hidden style="font-size:13px;font-weight:700;color:#a30400"></span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="r-obs" class="ui" style="font-size:12px;color:#260212">Observação (opcional)</label>
+            <input id="r-obs" name="obs" type="text" class="fld" placeholder="Aniversário, cadeirão, restrição alimentar...">
+          </div>
+          <button type="submit" id="res-send" class="btn btn-red btn-lg" style="align-self:center;margin-top:4px"><span id="res-send-label">Confirmar reserva</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </button>
+          <span class="hint" style="text-align:center">Tolerância de 15 minutos · cancelamento sem custo até 2h antes</span>
+        </form>
+      </div>
+
+      <div class="ph map" style="width:100%;min-height:300px;background-color:#4f0423;flex-direction:column;gap:12px;padding:28px 16px">
+        <img class="fill" src="assets/img/mapa.webp" alt="" aria-hidden="true" loading="lazy" style="filter:grayscale(1) contrast(1.1)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:#4f0423;mix-blend-mode:multiply;opacity:.55"></div>
+        <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(38,2,18,0) 0,rgba(38,2,18,.55) 70%)"></div>
+        <span class="pin" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="#e10600" stroke="#260212" stroke-width="1.2" stroke-linejoin="round"><path d="M12 22s-7.5-6.6-7.5-12a7.5 7.5 0 0 1 15 0c0 5.4-7.5 12-7.5 12z"></path><circle cx="12" cy="10" r="2.8" fill="#ffc7c6" stroke="none"></circle></svg>
+        </span>
+        <span style="position:relative;z-index:1;background:#260212;color:#ffffff;border-radius:12px;padding:10px 14px;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600">Rubra · Rua Exemplo, 123 · São Paulo/SP</span>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=S%C3%A3o+Paulo" target="_blank" rel="noopener" class="btn btn-red btn-sm" style="position:relative;z-index:1">Como chegar
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section style="padding:0 clamp(20px,5vw,64px) 120px">
+    <div style="max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px 40px">
+      <h2 class="disp" data-rv="" style="font-size:clamp(24px,2.4vw,32px);line-height:1.08;color:#ffffff;max-width:380px">Receba os pratos novos e as datas dos eventos</h2>
+      <p id="news-done" class="fade-in ui" role="status" hidden style="margin:0;font-size:15px;color:#ffc7c6">Pronto, você está na lista.</p>
+      <form id="news-form" novalidate aria-label="Assinar novidades" class="news-form" data-rv="" style="--d:120ms;flex:1 1 360px;max-width:480px;display:flex;gap:8px;background:#ffffff;border-radius:15px;padding:6px">
+        <label for="news" class="sr-only">Seu e-mail</label>
+        <input id="news" type="email" placeholder="Seu e-mail" autocomplete="email" style="flex:1;min-width:0;border:0;background:transparent;padding:10px 12px;font-size:15px;color:#260212;outline:none">
+        <button type="submit" class="btn btn-red" style="min-height:44px">Assinar</button>
+      </form>
+      <span id="e-news" role="alert" hidden style="flex-basis:100%;text-align:right;font-size:13px;font-weight:700;color:#ffc7c6"></span>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer style="position:relative;background:#260212;color:#ffffff">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:0;top:-69px;width:100%;height:70px;display:block"><path d="M0 70 L0 34 C 120 10, 240 48, 380 30 S 640 2, 820 26 S 1120 54, 1280 22 S 1400 14, 1440 30 L 1440 70 Z" fill="#260212"></path></svg>
+    <div style="max-width:1280px;margin:0 auto;padding:48px clamp(20px,5vw,64px) 36px;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:340px">
+          <span class="ui" style="font-size:12px;color:#ffc7c6">Siga a Rubra</span>
+          <div style="display:flex;gap:8px">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="float-btn" style="width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;color:#260212">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="float-btn" style="width:44px;height:44px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;color:#260212">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"></path></svg>
+            </a>
+          </div>
+          <span class="disp" style="font-size:56px;line-height:.9;color:#e10600;margin-top:8px">Rubra</span>
+          <p style="margin:0;font-size:13px;line-height:1.55;color:#ffc7c6">Brasa de lenha e vinho em São Paulo.</p>
+        </div>
+        <nav aria-label="Rodapé" class="ui" style="display:flex;flex-direction:column;gap:2px;font-size:13px">
+          <span style="color:#ffc7c6;margin-bottom:6px;font-size:12px">Navegar</span>
+          <a href="#cardapio" class="lk" style="padding:10px 0">Cardápio ›</a>
+          <a href="#experiencias" class="lk" style="padding:10px 0">Experiências ›</a>
+          <a href="#casa" class="lk" style="padding:10px 0">A casa ›</a>
+          <a href="#duvidas" class="lk" style="padding:10px 0">Dúvidas ›</a>
+          <a href="#reservas" class="lk" style="padding:10px 0">Reservas ›</a>
+        </nav>
+        <div id="horarios" class="ui" style="display:flex;flex-direction:column;gap:7px;font-size:13px">
+          <span style="color:#ffc7c6;margin-bottom:6px;font-size:12px">Horários</span>
+          <span>Ter a Sex · 12h às 15h</span>
+          <span>Ter a Sex · 17h às 23h</span>
+          <span>Sáb e Dom · 12h às 23h</span>
+          <span style="color:#ffc7c6">Segunda fechado</span>
+        </div>
+        <div class="ui" style="display:flex;flex-direction:column;gap:7px;font-size:13px">
+          <span style="color:#ffc7c6;margin-bottom:6px;font-size:12px">Contato</span>
+          <span>Rua Exemplo, 123 · São Paulo/SP</span>
+          <a href="tel:+5500900000000" class="lk" style="padding:10px 0">(00) 90000-0000 ›</a>
+          <a href="mailto:reservas@rubra.example" class="lk" style="padding:10px 0;text-transform:none">reservas@rubra.example</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #4f0423;padding-top:22px;font-size:12px;color:#ffc7c6">
+        <span>© 2026 Rubra · Brasa e Vinho</span>
+        <span>Projeto fictício de portfólio · Design e código por <strong style="color:#ffffff">Luccas Santana</strong> · Fotos e vídeo: <a href="https://pixabay.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Pixabay</a> e <a href="https://www.pexels.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Pexels</a></span>
+        <a href="#topo" class="totop-foot">Voltar ao topo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VOLTAR AO TOPO -->
+  <a href="#topo" id="totop" aria-label="Voltar ao topo" class="totop float-btn" hidden style="position:fixed;z-index:41;width:46px;height:46px;border-radius:15px;background:#ffc7c6;color:#260212;align-items:center;justify-content:center;border:1px solid #000000">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+  </a>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/5500900000000?text=Ol%C3%A1!%20Quero%20reservar%20uma%20mesa%20na%20Rubra." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp (abre em nova aba)" class="float-btn btn" style="position:fixed;right:20px;bottom:24px;z-index:40;height:52px;padding:0 16px;background:#e10600;color:#ffffff;border:1px solid #000000">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"></path><path d="M9 8.6c.2 3.2 3.1 6.1 6.3 6.3l1.2-1.5-2-1.1-1 .8c-1.1-.5-2.2-1.6-2.7-2.7l.8-1-1.1-2z"></path></svg>
+    WhatsApp
+  </a>
+
+  <!-- MENU CELULAR -->
+  <div id="menu-movel" role="dialog" aria-modal="true" aria-label="Menu" class="fade-in" hidden style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:60;background:#e10600;color:#ffffff;flex-direction:column;padding:12px 20px 32px;overflow:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;height:52px">
+      <span class="disp" style="font-size:30px;line-height:1">Rubra</span>
+      <button type="button" id="menu-close" aria-label="Fechar menu" style="width:44px;height:44px;border-radius:15px;border:1px solid #ffffff;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </button>
+    </div>
+    <nav aria-label="Menu móvel" style="display:flex;flex-direction:column;margin-top:28px">
+      <a href="#cardapio" class="disp menu-link">Cardápio</a>
+      <a href="#experiencias" class="disp menu-link">Experiências</a>
+      <a href="#casa" class="disp menu-link">A casa</a>
+      <a href="#duvidas" class="disp menu-link">Dúvidas</a>
+      <a href="#reservas" class="disp menu-link">Reservas</a>
+    </nav>
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
