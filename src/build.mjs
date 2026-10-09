@@ -2,6 +2,7 @@
 // Uso: node src/build.mjs <caminho do Main.dc.html>
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,7 +42,9 @@ const data = [
 const out = (p) => { const f = join(root, p); mkdirSync(dirname(f), { recursive: true }); return f; };
 writeFileSync(out('assets/css/style.css'), css + '\n');
 writeFileSync(out('assets/js/main.js'), readFileSync(join(root, 'src/main.template.js'), 'utf8').replace('/*DATA*/', data));
-writeFileSync(out('index.html'), readFileSync(join(root, 'src/index.template.html'), 'utf8'));
+// Versão nos links de CSS e JS para o navegador não usar uma cópia antiga depois de cada atualização
+const ver = createHash('sha1').update(css + data + readFileSync(join(root, 'src/main.template.js'), 'utf8')).digest('hex').slice(0, 8);
+writeFileSync(out('index.html'), readFileSync(join(root, 'src/index.template.html'), 'utf8').replace('assets/css/style.css', 'assets/css/style.css?v=' + ver).replace('assets/js/main.js', 'assets/js/main.js?v=' + ver));
 
 // Imagens otimizadas (webp e a capa do vídeo) e o vídeo do topo
 let n = 0;
